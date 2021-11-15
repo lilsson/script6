@@ -42,52 +42,52 @@
 // 1. xml http requist
 // 2. fetch
 
-// function getUsers (){
+function getUsers (){
 
-//     function render (){
-//         let response = this.responseText;
-//         let responseData = JSON.parse(response);
+    function render (){
+        let response = this.responseText;
+        let responseData = JSON.parse(response);
 
-//         let ul = document.createElement ("ul");
+        let ul = document.createElement ("ul");
         
         
-//         responseData.data.forEach( item => {
-//             let li = document.createElement('li');
-//             li.textContent = item.last_name;
-//             li.classList.add("show");
+        responseData.data.forEach( item => {
+            let li = document.createElement('li');
+            li.textContent = item.last_name;
+            li.classList.add("show");
             
             
-//             ul.appendChild(li);
-//         })
+            ul.appendChild(li);
+        })
 
 
 
-//         document.getElementById("ips").appendChild(ul);
-//         console.log(responseData);
-//     }
+        document.getElementById("ips").appendChild(ul);
+        console.log(responseData);
+    }
 
-//     function errorRender() {
-//         let p = document.createElement('p');
-//         p.textContent = "server error";
-//         p.classList.add("error");
+    function errorRender() {
+        let p = document.createElement('p');
+        p.textContent = "server error";
+        p.classList.add("error");
 
-//         document.getElementById("ips").appendChild(p);
-//     }
+        document.getElementById("ips").appendChild(p);
+    }
 
 
-//     let requist = new XMLHttpRequest();
+    let requist = new XMLHttpRequest();
  
-//     requist.addEventListener("load", render);
-//     requist.addEventListener("error", errorRender)
+    requist.addEventListener("load", render);
+    requist.addEventListener("error", errorRender)
 
-//     requist.open("GET", "https://reqres.in/api/users?page=2");
-//     requist.send();
-// }
+    requist.open("GET", "https://reqres.in/api/users?page=2");
+    requist.send();
+}
 
-// getUsers();
+getUsers();
 
 
-// fetch
+fetch
 
  fetch("https://reqres.in/api/users?page=2" , {
            method: "GET"
