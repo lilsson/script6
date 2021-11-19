@@ -1,0 +1,30 @@
+.posts{
+    background-color: lightsalmon;
+    padding: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.overlay{
+    background-color: lightcoral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    display: none;
+    
+
+}
+.overlay.active{
+    display: block;
+}
+.close{
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
